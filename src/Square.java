@@ -24,7 +24,7 @@ public class Square extends Rectangle {
  public String toString() {
   String str;
   
-  str = SHAPETYPE + " " + getArea();
+  str = SHAPETYPE + " " + getArea() + " Selected: " + getSelected();;
   
   return str;
  }
