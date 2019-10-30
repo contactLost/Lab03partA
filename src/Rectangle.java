@@ -8,6 +8,7 @@ public class Rectangle extends Shape{
  protected int width;
  protected int height;
  private final String SHAPETYPE = "Rectangle";
+ protected boolean select;
 
 
 
@@ -15,6 +16,7 @@ public class Rectangle extends Shape{
 
   this.width = width;
   this.height = height;
+  select = false;
 
  }
 
@@ -78,6 +80,48 @@ public class Rectangle extends Shape{
   
   return str;
  }
+
+ /** This method returns true if the shape selected
+  * 
+  */
+@Override
+public boolean getSelected() {
+	if(select) {		//Select = true then return true
+		return true;
+	}
+	else{				//Select = false then retrun false
+	return false;
+	}
+}
+
+/**This method sets the select condition
+ * 
+ */
+@Override
+public void setSelected(boolean bool) {
+	select = bool;
+}
+
+@Override
+public Shape contains(int x, int y) {
+	
+	boolean containsX = false;
+	boolean containsY = false;
+	
+	if(x < width || x > -width) {
+		containsX = true;
+	}
+	
+	if(y < height || y > -height) {
+		containsY = true;
+	}
+	
+	if(containsX && containsY) {
+		return this.Rectangle;
+	}
+	
+	return false;
+}
 
 
 }

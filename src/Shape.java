@@ -1,10 +1,10 @@
 /**This class holds the abstract shape
  * @author Tuna Dalbeler
  */ 
-public abstract class Shape implements Locatable{
+public abstract class Shape implements Locatable, Selectable{
 
- protected double x;
- protected double y;
+ protected int x;
+ protected int y;
  
  public abstract double getArea();
 
@@ -28,7 +28,7 @@ public abstract class Shape implements Locatable{
   * @param x X coordinate
   * @param y Y coordinate
   */ 
- public void setLocation(double x, double y){
+ public void setLocation(int x, int y){
   this.x = x;
   this.y = y;
  }

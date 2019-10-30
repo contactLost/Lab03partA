@@ -5,7 +5,7 @@ public class Circle extends Shape{
 
  private int radius;
  private final String SHAPETYPE = "Circle";
- 
+ private boolean select;
 
  Circle(int radius){ 
   this.radius = radius;
@@ -45,6 +45,27 @@ public class Circle extends Shape{
   return SHAPETYPE;
  }
 
+ /** This method returns true if the shape selected
+  * 
+  */
+@Override
+public boolean getSelected() {
+	if(select) {		//Select = true then return true
+		return true;
+	}
+	else{				//Select = false then retrun false
+	return false;
+	}
+}
+
+/**This method sets the select condition
+ * 
+ */
+@Override
+public void setSelected(boolean bool) {
+	select = bool;
+}
+ 
  /**This method returns a string representation of the Circle
   * @return str String
   */

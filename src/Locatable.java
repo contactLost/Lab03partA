@@ -7,5 +7,5 @@ public interface Locatable {
 
 	double getX();
 	double getY();
-	void setLocation();
+	void setLocation(int x , int y);
 }
